@@ -1,0 +1,268 @@
+<div class="ttitle">Estado de Hechos</div>
+
+<table class="form">
+	<tr>
+		<td><label>ID:</label><input type="text" name="idop" id="idop" ><input class="" type="button" value="Cargar" onclick="cargarFormEH()" />
+			<a href="#remarksx" >Remarks</a><a id="inicio"></a>
+			<a href="#firmas" >Firmas</a>| 
+			<a id="factspdf" href="" target="_blank">Estado de Hechos (PDF)</a> | 
+			<a id="factshtml" href="" target="_blank">Estado de Hechos (HTML)</a>
+		</td>
+	</tr>
+</table>
+
+<form class="autoForm">
+	<input type="hidden" name="table" id="table" value="operaciones" />
+	<input type="hidden" name="id" id="id" />
+<table class="form">
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Vessel</label>
+			<input type="text" name="vessel" id="vessel" class="inputBlock" />
+			<label class="labelBlock">Flag</label>
+			<input type="text" name="flag" id="flag" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Loading Port</label>
+			<input type="text" name="puertodecarga" id="puertodecarga" class="inputBlock" />
+			<label class="labelBlock">Disch Port</label>
+			<input type="text" name="puerto" id="puerto" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Cargo</label>
+			<input type="text" name="cargotype" id="cargotype" class="inputBlock" />
+			<label class="labelBlock">Agency</label>
+			<input type="text" name="agency" id="agency" class="inputBlock" value="TWIN MARINE DE MEXICO, S.A. DE C.V." />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Start Discharging</label>
+			<input type="text" name="startdischarging" id="startdischarging" class="inputBlock datetime" />
+			<label class="labelBlock">Complete Discharging</label>
+			<input type="text" name="completedescharging" id="completedescharging" class="inputBlock datetime" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Master Name</label>
+			<input type="text" name="mastername" id="mastername" class="inputBlock" />		
+		</td>
+	</tr>
+</table>
+</form>
+<form id="frm1">
+	<input type="hidden" name="table" id="table" value="computotiempo" />
+<table class="form">
+	<tr>
+		<td colspan="2" class="title">Registro de Hechos</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="field">
+			<label class="labelBlock">Tipo</label>
+			<select id="tipo" name="tipo" class="inputBlock">				
+                    <option value="ARRIVAL MANEUVERS">ARRIVAL MANEUVERS</option>
+                    <option value="OPERATIONAL" >OPERATIONAL</option>
+                    <option value="STOP/IDLE TIME" >STOP/IDLE TIME</option>
+                    <option value="SAILING INFORMATION" >SAILING INFORMATION</option>
+			</select>
+			
+			<label class="labelBlock">Clasificacion</label>
+			<select id="clasif" name="clasif" class="inputBlock"></select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Fact</label>
+		</td>
+		<td class="field">
+			<input type="text" id="fact" name="fact" size="100" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="field">
+			<label>Fecha</label>
+			<input type="text" name="fecha" id="fecha" class="date" size="8" />
+			
+			<label>H. Inicial</label>
+			<input type="text" name="hinicial" id="hinicial" class="time" size="4" />
+			
+			<label>H. Final</label>
+			<input type="text" name="hfinal" id="hfinal" class="time" size="4" />
+			
+			<label>% to Discount:</label>
+			<input type="text" name="timepercent" id="timepercent" class="" size="8" />
+			
+			<input type="button" value="Agregar" id="adFact" onclick="addFact()"/>
+		</td>
+	</tr>
+</table>
+</form>
+<table class="form">
+	<thead>
+		<tr class="title">
+			<th width="80px">Fecha</th>
+			<th width="70px">H. Inicial</th>
+			<th width="70px">H. Final</th>
+			<th width="100px">Tipo</th>
+			<th width="100px">Clasificacion</th>
+			<th>Fact</th>
+			<th width="100px">% to Discount</th>
+			<th width="10px">Options</th>
+		</tr>
+	</thead>
+</table>
+	<div id="tablaHechos">
+	</div>
+<form class="autoFormB">
+	<input type="hidden" name="table" id="table" value="operaciones" />
+<table class="form">
+	<thead>
+		<tr>
+			<th class="title"><a id="remarksx">Remarks</a></th>
+		</tr>
+	</thead>
+	<tbody style="background-color: #F0F0F0;">
+		<tr>
+			<td>
+				<label>Master Remarks</label><br />
+				<textarea cols="150" rows="10" name="masterremarks" id="masterremarks"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>General Remarks</label><br />
+				<textarea cols="150" rows="10" name="remarks" id="remarks"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#inicio">Ir al inicio</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table class="form">
+	<thead>
+		<tr>
+			<th class="title" colspan="2"><a id="firmas">Firmas</a></th>
+		</tr>
+	</thead>
+	<tbody style="background-color: #F0F0F0;">
+		<tr>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo1" id="titulo1" size="80" /><br />
+				<input type="text" name="titulo21" id="titulo21" size="80" /><br />
+				<input type="text" name="onbehalf1" id="onbehalf1" size="80" /><br />
+				<input type="text" name="etiqueta1" id="etiqueta1" size="80" /><br />
+			</td>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo2" id="titulo2" size="80" /><br />
+				<input type="text" name="titulo22" id="titulo22" size="80" /><br />
+				<input type="text" name="onbehalf2" id="onbehalf2" size="80" /><br />
+				<input type="text" name="etiqueta2" id="etiqueta2" size="80" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo3" id="titulo3" size="80" /><br />
+				<input type="text" name="titulo23" id="titulo23" size="80" /><br />
+				<input type="text" name="onbehalf3" id="onbehalf3" size="80" /><br />
+				<input type="text" name="etiqueta3" id="etiqueta3" size="80" /><br />
+			</td>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo4" id="titulo4" size="80" /><br />
+				<input type="text" name="titulo24" id="titulo24" size="80" /><br />
+				<input type="text" name="onbehalf4" id="onbehalf4" size="80" /><br />
+				<input type="text" name="etiqueta4" id="etiqueta4" size="80" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo5" id="titulo5" size="80" /><br />
+				<input type="text" name="titulo25" id="titulo25" size="80" /><br />
+				<input type="text" name="onbehalf5" id="onbehalf5" size="80" /><br />
+				<input type="text" name="etiqueta5" id="etiqueta5" size="80" /><br />
+			</td>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo6" id="titulo6" size="80" /><br />
+				<input type="text" name="titulo26" id="titulo26" size="80" /><br />
+				<input type="text" name="onbehalf6" id="onbehalf6" size="80" /><br />
+				<input type="text" name="etiqueta6" id="etiqueta6" size="80" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo7" id="titulo7" size="80" /><br />
+				<input type="text" name="titulo27" id="titulo27" size="80" /><br />
+				<input type="text" name="onbehalf7" id="onbehalf7" size="80" /><br />
+				<input type="text" name="etiqueta7" id="etiqueta7" size="80" /><br />
+			</td>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo8" id="titulo8" size="80" /><br />
+				<input type="text" name="titulo28" id="titulo28" size="80" /><br />
+				<input type="text" name="onbehalf8" id="onbehalf8" size="80" /><br />
+				<input type="text" name="etiqueta8" id="etiqueta8" size="80" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo9" id="titulo9" size="80" /><br />
+				<input type="text" name="titulo29" id="titulo29" size="80" /><br />
+				<input type="text" name="onbehalf9" id="onbehalf9" size="80" /><br />
+				<input type="text" name="etiqueta9" id="etiqueta9" size="80" /><br />
+			</td>
+			<td ><label>Firma:</label><br />
+				<input type="text" name="titulo10" id="titulo10" size="80" /><br />
+				<input type="text" name="titulo210" id="titulo210" size="80" /><br />
+				<input type="text" name="onbehalf10" id="onbehalf10" size="80" /><br />
+				<input type="text" name="etiqueta10" id="etiqueta10" size="80" /><br />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><a href="#inicio">Ir al inicio</a></td>
+		</tr>
+	</tbody>
+</table>
+</form>
+
+<script type="text/javascript">
+	//getTable("barcos", "vessel, flag, mastername", "", true);
+	setClassEvents();
+	getOptionSelect("#clasif", "clasificacion", "clasificacion", "clasificacion", "order by clasificacion");
+	$(function(){
+		$( "#fact" ).autocomplete({
+            source: "php/factsList.php",
+            minLength: 1,
+            select: function( event, ui ) {
+                log( ui.item ?
+                    "Selected: " + ui.item.value + " aka " + ui.item.id :
+                    "Nothing selected, input was " + this.value );
+            }            
+        });
+        
+        $('.autoForm input').change(function(){
+	        var form = $(this).parents('form:first');
+	        var id= form.children('#id').val();
+	        
+	        if(id!=undefined && id!="")	{
+		        var data = form.serialize();	        
+		        autoSave(data);
+	       	}
+	    });
+	    
+	    $('.autoFormB input, .autoFormB select, .autoFormB textarea').change(function(){
+	        var form = $(this).parents('form:first');
+	        var id= $('#id').val();
+	        	        
+	        if(id!=undefined && id!="")	{
+		        var data = form.serialize()+"&id="+id;	        
+		        autoSave(data);		        
+	       	}
+	    });
+	});
+</script>

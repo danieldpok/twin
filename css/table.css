@@ -1,0 +1,77 @@
+.tback	{
+	cursor:	pointer;
+	float:	left;
+}
+.tnext	{
+	cursor:	pointer;
+	float:	left;
+}
+.npagina	{
+	cursor:	pointer;
+	float:	left;
+	width: 20px;
+	cursor: pointer;
+}
+.tedit	{
+	cursor:	pointer;
+	float:	left;
+	width: 40px;
+	text-decoration: underline;
+}
+.tdelete	{
+	cursor:	pointer;
+	float:	left;
+	width:	40px;
+	text-decoration: underline;
+}
+.topciones	{
+	width:	85px;
+}
+.tno{
+	width:	40px;
+}
+.table	{
+	width: 98%;
+	border-collapse:	collapse;
+	
+	/*border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #D0D0D0;*/
+	padding-bottom: 5px;
+	
+	border-style: solid;
+	border-width: 1px;
+	border-color: #D0D0D0;
+}
+.table thead tr	{
+	
+	background-color:	#333333;
+	color:	#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align:	left;
+	/*font-weight: bold;*/
+}
+.table th	{
+	padding: 2px;
+}
+.table tbody tr	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-left: 4px;
+	color: #888888;
+}
+.table tbody tr:hover	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-left: 4px;
+	background-color:#65C4E5;
+	color: #222222;
+}
+.ttitle	{		
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 4px;
+	color: #888888;
+}

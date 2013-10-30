@@ -1,0 +1,44 @@
+body {
+	color: black;
+	background: white url(../fondo.jpg) no-repeat fixed center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+p {
+
+}
+
+td {
+	font-size: 10px;
+}
+
+a:link { color: blue }
+
+a:visited { color: purple }
+
+a:hover { color: purple }
+
+a:active { color: red }
+fondo { background-image: url(fondo.jpg); background-repeat: inherit; background-attachment: fixed; background-position: center; }
+.abajoz {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.abajoz {
+	font-weight: bold;
+}
+.abajoz {
+	color: #FFF;
+}
+.normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.x {
+	color: #0183bf;
+}
+.x {
+	font-size: 9px;
+	color: #000;
+}

@@ -1,0 +1,165 @@
+<div class="ttitle">Computo de Tiempo</div>
+
+<table class="form">
+	<tr>
+		<td><label>ID:</label><input type="text" name="idop" id="idop" ><input class="" type="button" value="Cargar" onclick="cargarFormCT()" />
+			<a id="computo" href="" target="_blank">Computo de Tiempo</a>
+		</td>
+	</tr>
+</table>
+
+<form class="autoForm">
+	<input type="hidden" name="table" id="table" value="operaciones" />
+	<input type="hidden" name="id" id="id" />
+<table class="form">
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Vessel</label>
+			<input type="text" name="vessel" id="vessel" class="inputBlock" />
+			<label class="labelBlock">Rate</label>
+			<input type="text" name="dischperday" id="dischperday" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Port</label>
+			<input type="text" name="puerto" id="puerto" class="inputBlock" />
+			<label class="labelBlock">Terms</label>
+			<input type="text" name="terms" id="terms" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Cargo</label>
+			<input type="text" name="cargotype" id="cargotype" class="inputBlock" />
+			<label class="labelBlock">Time Allowed</label>
+			<input type="text" name="timeallowed" id="timeallowed" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Quantity</label>
+			<input type="text" name="quantity" id="quantity" class="inputBlock" />
+			<label class="labelBlock">Receiver</label>
+			<input type="text" name="recibidorform" id="recibidorform" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Time to Count</label>
+			<input type="text" name="timetocount" id="timetocount" class="inputBlock datetime" />
+			<label class="labelBlock">NOR Tendered</label>
+			<input type="text" name="nortendered" id="nortendered" class="inputBlock datetime" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Start Discharging</label>
+			<input type="text" name="startdischarging" id="startdischarging" class="inputBlock datetime" />
+			<label class="labelBlock">NOR Presented</label>
+			<input type="text" name="norpresented" id="norpresented" class="inputBlock datetime" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Complete Discharging</label>
+			<input type="text" name="completedescharging" id="completedescharging" class="inputBlock datetime" />
+			<label class="labelBlock">NOR Acepted</label>
+			<input type="text" name="noracepted" id="noracepted" class="inputBlock datetime" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			
+			<label class="labelBlock">Time Used</label>
+			<input type="text" name="timeused" id="timeused" class="inputBlock" />			
+		</td>
+	</tr>
+</table>
+<input type="button" id="save" value="Guardar" />
+</form>
+
+<form id="frm1">
+	<input type="hidden" name="table" id="table" value="computotiempox" />
+<table class="form">
+	<tr>
+		<td class="field">
+			<label >Fecha</label>
+			<input type="text" class="date" />
+			
+			<label >H Inicial</label>
+			<input type="text" class="time" />
+			
+			<label >H Final</label>
+			<input type="text" class="time" />
+						
+			<select id="tipo" name="tipo">
+				<option value="OPERATIONAL">OPERATIONAL</option>
+				<option value="STOP/IDLE TIME">STOP/IDLE TIME</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label>Remarks for Deduction: </label>
+			<select id="" name="" class="inputBlock"></select>
+			<input type="text" class="" />
+		</td>		
+	</tr>
+	<tr>
+		<td class="field">
+			<label>% to discount</label>
+			<input type="text" name="" id="" class="" size="8" />
+			
+			<label>Remarks</label>
+			<input type="text" name="" id="" class="" />
+			
+			<input type="button" value="Agregar" id="adFact" onclick="addFact()"/>
+		</td>
+	</tr>
+</table>
+</form>
+<table class="form">
+	<thead>
+		<tr class="title">
+			<th width="80px">DATE</th>
+			<th width="70px">DAY</th>
+			<th width="70px">PERIOD</th>
+			<th width="100px">TO DISCOUNT</th>
+			<th width="150px">FACT</th>
+			<th width="100px">TYPE</th>
+			<th width="200px">REMARKS FOR DEDUCTION</th>
+			<th width=""></th>
+		</tr>
+	</thead>
+</table>
+	<div id="tablaComputo">
+	</div>
+<script type="text/javascript">
+	setClassEvents();
+	  $(function() {
+	    $( ".date" ).datepicker({
+		      changeMonth: true,
+		      changeYear: true,
+		      dateFormat: 'yy-mm-dd'
+		    });
+		
+        $("#computo").click(function(){
+        	var idop=$("#idop").val();        	
+			$("#computo").attr({href:"reports/docs/timecalc.php?id="+idop});
+        });
+        
+        $("#dischperday").focusout(function(){calcular();});
+        $("#quantity").focusout(function(){calcular();});
+        /*$('.autoForm input').change(function(){
+	        var form = $(this).parents('form:first');
+	        var id= form.children('#id').val();
+	        
+	        if(id!=undefined && id!="")	{
+		        var data = form.serialize();	        
+		        autoSave(data);
+	       	}
+	    });*/	   
+	        
+	  });
+</script>

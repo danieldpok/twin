@@ -1,0 +1,603 @@
+<div class="formLink"  id="reports/operaciones.html" >Regresar</div>
+
+
+<form>	
+	<input type="hidden" name="table" id="table" value="operaciones" />
+	<input type="hidden" name="id" id="id" />
+
+	<div id="tabs">
+	  <ul>
+	    <li><a href="#tabs-1">Ship's Particulars</a></li>
+	    <li><a href="#tabs-2">Drafts</a></li>
+	    <li><a href="#tabs-3">Last Ports/Crew</a></li>
+	    <li><a href="#tabs-4">Arrival/Departure</a></li>
+	    <li><a href="#tabs-5">Cargo</a></li>
+	    <li><a href="#tabs-6">Informativo</a></li>
+	  </ul>
+	  <div id="tabs-1">
+	    <table class="form">
+			<!--<tr>
+				<td colspan="2" class="title">Operaciones</td>
+			</tr>-->
+			<tr>
+				<td><label>ID:</label></td>
+				<td class="field"><input type="text" name="idop" id="idop" />	<a id="formatos" href="" target="_blank">Formatos</a></td>
+			</tr>
+			<tr>
+				<td><label>Fecha:</label></td>
+				<td class="field"><input type="text" name="fecha" id="fecha" class="date" /></td>
+			</tr>
+			<tr>
+				<td><label>Puerto:</label></td>
+				<td class="field"><input type="text" name="puerto" id="puerto" class="" /></td>
+			</tr>
+			<tr>
+				<td><label>No. Viaje:</label></td>
+				<td class="field"><input type="text" name="noviaje" id="noviaje" class="" />
+					<select name="typex" id="typex">
+						<option value="">IMPORT</option>
+						<option value="">EXPORT</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Vessel</label></td>
+				<td class="field"><input type="text" name="vessel" id="vessel" class="" size="100" /></td>
+			</tr>
+			<tr>
+				<td><label>Flag</label></td>
+				<td class="field"><input type="text" name="flag" id="flag" class="" readonly="" size="100" /></td>
+			</tr>
+			<tr>
+				<td><label>Master Name</label></td>
+				<td class="field"><input type="text" name="mastername" id="mastername" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Port of Reg</label></td>
+				<td class="field"><input type="text" name="portofreg" id="portofreg" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Call Sign</label></td>
+				<td class="field"><input type="text" name="callsign" id="callsign" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Ofcial NBR</label></td>
+				<td class="field"><input type="text" name="oficialnbr" id="oficialnbr" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>IMO NBR</label></td>
+				<td class="field"><input type="text" name="imonbr" id="imonbr" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Builders</label></td>
+				<td class="field"><input type="text" name="builders" id="builders" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Keel Laid</label></td>
+				<td class="field"><input type="text" name="keellaid" id="keellaid" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Launched</label></td>
+				<td class="field"><input type="text" name="launched" id="launched" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Class</label></td>
+				<td class="field"><input type="text" name="class" id="class" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Engine</label></td>
+				<td class="field"><input type="text" name="engine" id="engine" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Owners</label></td>
+				<td class="field"><input type="text" name="owners" id="owners" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Managers</label></td>
+				<td class="field"><input type="text" name="managers" id="managers" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>Built</label></td>
+				<td class="field"><input type="text" name="built" id="built" class="" readonly="" size="10"/></td>
+			</tr>
+			
+		</table>
+	  </div>
+	  <div id="tabs-2">
+	  	<table class="form">
+	  		<tr>
+				<td><label>LOA</label></td>
+				<td class="field"><input type="text" name="loamt" id="loamt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>Breadth Moulded</label></td>
+				<td class="field"><input type="text" name="breadthmouldedmt" id="breadthmouldedmt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>Depth Moulded</label></td>
+				<td class="field"><input type="text" name="depthmouldedmt" id="depthmouldedmt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>DWT Summer</label></td>
+				<td class="field"><input type="text" name="dwtsummer" id="dwtsummer" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>GRT</label></td>
+				<td class="field"><input type="text" name="dwtgrt" id="dwtgrt" class="" readonly="" size="10"/>
+					<label>NRT</label>
+					<input type="text" name="dwtnrt" id="dwtnrt" class="" readonly="" size="10"/></td>
+			</tr>
+			<tr>
+				<td><label>Max Arrival Draft</label></td>
+				<td class="field"><input type="text" name="maxarrivaldraftmt" id="maxarrivaldraftmt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>Depth Summer Draft</label></td>
+				<td class="field"><input type="text" name="depthsummerdraftmt" id="depthsummerdraftmt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>Keel to Mast</label></td>
+				<td class="field"><input type="text" name="keeltomastmt" id="keeltomastmt" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>Light Ship</label></td>
+				<td class="field"><input type="text" name="lightship" id="lightship" class="" readonly="" size="10"/></td>
+			</tr>
+			<tr>
+				<td><label>Suez Certificate Issued</label></td>
+				<td class="field"><input type="text" name="suezcertificateissued" id="suezcertificateissued" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>GRT</label></td>
+				<td class="field"><input type="text" name="suezgrt" id="suezgrt" class="" readonly="" size="10"/>
+					<label>NRT</label>
+					<input type="text" name="sueznrt" id="sueznrt" class="" readonly="" size="10"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Panama Certificate Issued</label></td>
+				<td class="field"><input type="text" name="panamacertificateissued" id="panamacertificateissued" class="" readonly="" size="100"/></td>
+			</tr>
+			<tr>
+				<td><label>GRT</label></td>
+				<td class="field"><input type="text" name="panamagrt" id="panamagrt" class="" readonly="" size="10"/>
+					<label>NRT</label>
+					<input type="text" name="panamanrt" id="panamanrt" class="" readonly="" size="10"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Cranes on Board/Derrick and SWL</label></td>
+				<td class="field"><input type="text" name="cranesonboard" id="cranesonboard" class="" readonly="" size="10"/>M</td>
+			</tr>
+			<tr>
+				<td><label>NBR H/H</label></td>
+				<td class="field"><input type="text" name="nbrhh" id="nbrhh" class="" readonly="" size="10"/></td>
+			</tr>
+			<tr>
+				<td><label>Hatch Cover Type</label></td>
+				<td class="field"><input type="text" name="hatchcovertype" id="hatchcovertype" class="" readonly="" size="100"/></td>
+			</tr>
+	  	</table>
+	    
+	  </div>
+	  
+	  
+	  <div id="tabs-3">
+	  	<table class="form">
+	  		<tr>
+				<td colspan="2" class="title">PORTS</td>
+			</tr>			
+			<tr>
+				<td><label>Last Port</label></td>
+				<td class="field"><input type="text" name="lastport" id="lastport" class="" size="50"/></td>
+			</tr>			
+			<tr>
+				<td><label>Ports of Calls</label></td>
+				<td class="field"><textarea type="text" cols="100" name="portsofcalls" id="portsofcalls"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" class="title">CREW MEMBERS</td>
+			</tr>
+			<tr>
+				<td class="field" colspan="2">
+					<label>All Members</label>
+					<input type="text" name="allmembers" id="allmembers" class="" size="10"/>
+					<label>Nacionalidad</label>
+					<input type="text" name="nacionalidad" id="nacionalidad" class="" size="10"/>
+					
+					<label>Pasajeros</label>
+					<input type="text" name="pasajeros" id="pasajeros" value="0" class="" size="10"/>					
+				</td>				
+			</tr>
+			<tr>				
+				<td class="field" colspan="2">
+					<label>All Members</label>
+					<input type="text" name="" id="" class="" size="10"/>
+					<label>Nacionalidad</label>
+					<input type="text" name="" id="" class="" size="10"/>
+				</td>
+			</tr>
+			<tr>				
+				<td colspan="2">
+					<table class="form">
+						<tr>
+							<th>Crew Members</th>
+							<th>Nacionalidad</th>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+					
+			
+			<tr>
+				<td colspan="2" class="title">DATOS DE FACTURACION</td>
+			</tr>
+
+			<tr>
+				<td><label>Razon Social</label></td>
+				<td class="field"><input type="text" name="razonsocial" id="razonsocial" class="" size="50"/></td>
+			</tr>			
+			<tr>
+				<td><label>Domicilio</label></td>
+				<td class="field"><textarea type="text" cols="100" name="domicilio" id="domicilio"></textarea></td>
+			</tr>
+			<tr>
+				<td><label>Telefono</label></td>
+				<td class="field"><input type="text" name="telefono" id="telefono" class="" size="50"/></td>
+			</tr>	
+	  	</table>  
+	  </div>
+	  
+	  <div id="tabs-4">
+	  
+	  <table class="form">
+	  	
+	  	<tr>
+	  		<th class="title">Arrival Conditions: Arrival Times</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>Arribo</label>
+	  			<input type="text" id="arrivo" name="arrivo" class="datetime" size="20" />hrs
+	  			
+	  			<label>EOSP</label>
+	  			<input type="text" id="eosp" name="eosp" class="datetime" size="20" />hrs
+	  			
+	  			<label>Anchorage</label>
+	  			<input type="text" id="anchorage" name="anchorage" class="datetime" size="20" />hrs
+	  			
+	  			<label>POB</label>
+	  			<input type="text" id="pob" name="pob" class="datetime" size="20" />hrs
+	  		</td>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>Crossed Brakewaters</label>
+	  			<input type="text" id="crossedbrakewaters" name="crossedbrakewaters" class="datetime" size="20" />hrs
+	  			
+	  			<label>First Line Ashore</label>
+	  			<input type="text" id="fistlineashore" name="fistlineashore" class="datetime" size="20" />hrs
+	  			
+	  			<label>Berthed Alongside</label>
+	  			<input type="text" id="berthedalongside" name="berthedalongside" class="datetime" size="20" />hrs
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<th>Bunkers</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>IFO</label>
+	  			<input type="text" id="ifo1" name="ifo1" class="datetime" size="10" />MT
+	  			
+	  			<label>MDO</label>
+	  			<input type="text" id="mdo1" name="mdo1" class="datetime" size="20" />MT
+	  			
+	  			<label>FW</label>
+	  			<input type="text" id="fw1" name="fw1" class="datetime" size="20" />MT
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<th>Draft</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>FWD</label>
+	  			<input type="text" id="fwd1" name="fwd1" class="datetime" size="10" />MT
+	  			
+	  			<label>AFT</label>
+	  			<input type="text" id="aft1" name="aft1" class="datetime" size="20" />MT
+	  			
+	  		</td>
+	  	</tr>
+	  	
+	  	<!------------------->
+	  	<tr>
+	  		<th class="title">Departure Information: Sailing Times</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>Initial Draft Survey</label>
+	  			<input type="text" id="initialdraftsurvey" name="initialdraftsurver" class="datetime" size="20" />hrs
+	  			
+	  			<label>Final Draft Survey</label>
+	  			<input type="text" id="finaldraftsurvey" name="finaldraftsurvey" class="datetime" size="20" />hrs
+	  			
+	  			<label>Doc. on Board</label>
+	  			<input type="text" id="doconboard" name="doconboard" class="datetime" size="20" />hrs
+	  			
+	  		</td>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>Pilot on Board</label>
+	  			<input type="text" id="pilotonboard" name="pilotonboard" class="datetime" size="20" />hrs
+	  			
+	  			<label>Unberted from the Pier</label>
+	  			<input type="text" id="unbertedfromthepier" name="unbertedfromthepier" class="datetime" size="20" />hrs
+	  			
+	  			<label>Crossed out Brake Waters</label>
+	  			<input type="text" id="crossedoutbrakewaters" name="crossedoutbrakewaters" class="datetime" size="20" />hrs
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<th>Bunkers</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>IFO</label>
+	  			<input type="text" id="ifo2" name="ifo2" class="datetime" size="10" />MT
+	  			
+	  			<label>MDO</label>
+	  			<input type="text" id="mdo2" name="mdo2" class="datetime" size="20" />MT
+	  			
+	  			<label>FW</label>
+	  			<input type="text" id="fw2" name="fw2" class="datetime" size="20" />MT
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<th>Draft</th>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>FWD</label>
+	  			<input type="text" id="fwd2" name="fwd2" class="datetime" size="10" />MT
+	  			
+	  			<label>AFT</label>
+	  			<input type="text" id="aft2" name="aft2" class="datetime" size="20" />MT
+	  			
+	  		</td>
+	  	</tr>
+	  	
+	  </table>
+	      
+	  </div>
+	  
+	  <div id="tabs-5">
+	  
+	  <table class="form">
+	  	<tr>
+	  		<th class="title">Cargo and Time Allowed</th>
+	  	</tr>
+	  	<tr>	  		
+	  		<td class="field">
+	  			<label>Cargo Type</label>
+	  			<input type="text" id="cargotype" name="cargotype" size="50" />
+	  			
+	  			<label>Vessel Type</label>
+	  			<input type="text" id="vesseltype" name="vesseltype" size="50" />
+	  		</td>
+	  	</tr>
+	  	<tr>
+	  		<td class="field">
+	  			<label>Disch/Load per Day</label>
+	  			<input type="text" id="dischperday" name="dischperday" size="50" />
+	  			
+	  			<label>Quantity</label>
+	  			<input type="text" id="quantity" name="quantity" size="50" />
+	  			
+	  			<label>Time Allowed</label>
+	  			<input type="text" id="timeallowed" name="timeallowed" size="50" readonly="" />
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<td class="field">
+	  			<label>Muelle</label>
+	  			<input type="text" id="muelle" name="muelle" size="50" />
+	  			<label>HRS</label>
+	  			<input type="text" id="muellehrs" name="muellehrs" size="20" />
+	  			<label>Banda</label>
+	  			<input type="text" id="banda" name="banda" size="50" />
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<td class="field">
+	  			<label>Manifiesto de Origen</label>
+	  			<input type="text" id="manifiestodeorigen" name="manifiestodeorigen" size="50" />
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<th class="title">Cargo</th>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<td class="field">
+	  			<label>Pais de Origen</label>
+	  			<input type="text" id="paisdeorigen" name="paisdeorigen" size="50" />
+	  			<label>Puerto de Carga</label>
+	  			<input type="text" id="puertodecarga" name="puertodecarga" size="50" />
+	  			<label>Sailed</label>
+	  			<input type="text" id="sailed" name="sailed" size="50" />
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<td class="field">
+	  			<label>ETA</label>
+	  			<input type="text" id="eta" name="eta" size="20" />
+	  			<label>Port</label>
+	  			<input type="text" id="etaport" name="etaport" size="30" />
+	  			<label>Pais</label>
+	  			<input type="text" id="etapais" name="etapais" size="30" />
+	  			<label>Hora</label>
+	  			<input type="text" id="etahora" name="etahora" size="10" />
+	  		</td>
+	  	</tr>
+	  	
+	  	<tr>
+	  		<td class="field">
+	  			<label>ETF</label>
+	  			<input type="text" id="etf" name="etf" size="20" />
+	  			<label>Next Port</label>
+	  			<input type="text" id="etfnextport" name="etfnextport" size="30" />
+	  			<label>Pais</label>
+	  			<input type="text" id="etfpais" name="etfpais" size="30" />
+	  			<label>Fecha</label>
+	  			<input type="text" id="nextportfecha" name="nextportfecha" size="20" />
+	  			<label>Hora</label>
+	  			<input type="text" id="etfhora" name="etfhora" size="10" />
+	  		</td>
+  		</tr>
+  		<tr>
+	  		<td class="field">
+	  			<label>Color de Casco</label>
+	  			<input type="text" id="colordecasco" name="colordecasco" size="20" />
+	  			<label>Carga en Transito</label>
+	  			<input type="text" id="cargaentransito" name="cargaentransito" size="30" />
+	  			<label>Tons</label>
+	  			<input type="text" id="tonstrans" name="tonstrans" size="30" value="0" />
+	  		</td>
+  		</tr>
+  		<tr>
+	  		<td class="field">
+	  			<label>Carga Tomada en este Puerto</label>
+	  			<input type="text" id="cargatomada" name="cargatomada" size="30" />
+	  			<label>Tons</label>
+	  			<input type="text" id="transtom" name="transtom" size="30" value="0" />
+	  		</td>
+	  	</tr>
+	  	
+	  </table>
+	  </div>
+	  
+	  <div id="tabs-6">
+	  	<table class="form">
+	  		<tr>
+	  			<th class="title" colspan="2">Información para el Reporte Previo</th>
+	  		</tr>
+	  		<tr>
+	  			<td class="field" colspan="2">
+	  				<label>Initial Quantity</label>
+	  				<input type="text" id="fquantity" name="fquantity" size="30" />
+	  			</td>	  			
+	  		</tr>
+	  		<tr>
+	  			<td class="field" colspan="2">
+	  				<label>Firs Dischar. Port</label>
+	  				<input type="text" id="firstport" name="firstport" size="30" />
+	  				
+	  				<label>Total Parcel at First Port</label>
+	  				<input type="text" id="totalparcelfirst" name="totalparcelfirst" size="30" />
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="field" colspan="2">
+	  				<label>Maximum Arrival Draft</label>
+	  				<input type="text" id="madfirst" name="madfirst" size="30" />(En metros)
+	  			</td>	  			
+	  		</tr>
+	  		<tr>
+	  			<td class="field" colspan="2">
+	  				<label>Second Dischar. Port</label>
+	  				<input type="text" id="secondport" name="secondport" size="20" /> 
+	  				
+	  				<label>Total Parcel</label>
+	  				<input type="text" id="totalparcelsecond" name="totalparcelsecond" size="30" />
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="field" colspan="2">
+	  				<label>Maximum Arrival Draft</label>
+	  				<input type="text" id="madsecond" name="madsecond"size="30" />(En metros)
+	  			</td>	  			
+	  		</tr>
+	  		<tr>
+	  			<td class="field"><label>Notes</label><br />
+	  				<textarea name="notes" id="notes" cols="100" rows="6"></textarea>
+	  			</td>
+	  		</tr>
+	  		<tr>
+	  			<td class="field"><label>Weather Conditions</label><br />
+	  				<textarea name="weather" id="weather" cols="100" rows="6"></textarea>
+	  			</td>
+	  		</tr>
+	  		<tr>
+				<td class="field"><label>Nombre de Quien Firma los Formatos</label>  				
+	  				<input type="text" id="firma" name="firma" size="50" />
+	  			</td>	  			
+	  		</tr>
+	  		<tr>
+	  			<td class="field"><label>Cargo de Quien Firma los Formatos</label>  				
+	  				<input type="text" id="cargo" name="cargo" size="50" />
+	  			</td>	  			
+	  		</tr>
+	  	</table>	    
+	  </div>
+	</div>
+
+	
+		<input type="button" id="save" value="Guardar" /><input id="delete" type="button" value="Eliminar" /><input id="new" type="button" value="Nuevo" />
+</form>
+<script type="text/javascript">
+	setClassEvents();
+	  $(function() {
+	    $( "#tabs" ).tabs();
+	    $( ".date" ).datepicker({
+		      changeMonth: true,
+		      changeYear: true,
+		      dateFormat: 'yy-mm-dd'
+		    });
+		$( "#vessel" ).autocomplete({
+            source: "php/barcos.php",
+            minLength: 1,
+            select: function( event, ui ) {
+                log( ui.item ?
+                    "Selected: " + ui.item.value + " aka " + ui.item.id :
+                    "Nothing selected, input was " + this.value );
+            },
+            select: function( event, ui ) {
+		 		var condition = "vessel='"+this.value+"'";
+				$.ajax({url: "php/loadForm.php",
+					data: {tabla:"barcos" , condition:condition},
+					type: "POST",
+					cache: false,
+						   success: function(respuesta)	{
+							   eval(respuesta);			   
+						   }
+					}).done(loadingOff());
+		        return false;
+		      }
+        });
+        $("#formatos").click(function(){
+        	var idop=$("#idop").val();
+        	$("#formatos").attr({href:"reports/docs/formato2.php?id="+idop+"&dias=0"});
+        });
+        
+	  });
+</script>

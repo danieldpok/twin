@@ -1,0 +1,57 @@
+body {
+	color: black;
+	background-attachment: fixed;
+	background-color: white;
+	background-image: url(../fondo.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+p {}
+
+td {}
+
+a:link { color: blue }
+
+a:visited { color: purple }
+
+a:hover { color: purple }
+
+a:active { color: red }
+fondo { background-image: url(fondo.jpg); background-repeat: inherit; background-attachment: fixed; background-position: center; }
+.font
+{ 
+font-weight:bold
+
+}
+.fontSub
+{
+	font-weight:bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: center;
+	background-color: #004E98;
+	color: #FFF;
+	font-size: 12px;
+}
+.fontTITLE
+{
+	font-weight:bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: center;
+	background-color: #ECE9D8;
+	color: #000;
+}
+a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #F00;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}

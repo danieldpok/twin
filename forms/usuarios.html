@@ -1,0 +1,30 @@
+<div class="formLink"  id="reports/usuarios.html" >Regresar</div>
+<form>	
+	<input type="hidden" name="table" id="table" value="usuarios" />
+	<input type="hidden" name="id" id="id" />
+	<table class="form">
+		<tr>
+			<td colspan="2" class="title">Usuarios</td>
+		</tr>		
+		<tr>
+			<td><label>Nombre:</label></td>
+			<td class="field"><input type="text" name="nombre" id="nombre" class="required" /></td>
+		</tr>
+		<tr>
+			<td><label>Usuario:</label></td>
+			<td class="field"><input type="text" name="usuario" id="usuario" class="required" /></td>
+		</tr>
+		<tr>
+			<td><label>Password:</label></td>
+			<td class="field"><input type="password" name="password" id="password" class="required" /></td>
+		</tr>
+		<!--<tr>
+			<td><label>Email:</label></td>
+			<td class="field"><input type="text" name="email" id="email" class="required email" /></td>
+		</tr>-->
+	</table>
+		<input type="button" id="save" value="Guardar" /><input id="delete" type="button" value="Eliminar" /><input id="new" type="button" value="Nuevo" />
+</form>
+<script type="text/javascript">
+	setClassEvents();
+</script>

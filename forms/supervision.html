@@ -1,0 +1,346 @@
+<div class="ttitle">Supervision</div>
+<select>
+	<option value="-1">Seleccionar ...</option>
+	<option value="1">Registro de nuevo ID</option>
+	<option value="2">Operaciones de Buque</option>
+	<option value="3">Reportes</option>
+</select>
+<div id="nuevoId">
+	
+	<form class="autoForm">
+	<input type="hidden" name="table" id="table" value="supervision" />
+	<input type="hidden" name="id" id="id" />
+<table class="form" style="border: 2px dashed #99CCFF;" >
+	<tr>		
+		<td class="field" >
+			<label class="labelBlock">Operacion:</label>
+			<select>
+				<option value="-1">Seleccionar ...</option>
+				<option value="carga">Importacion</option>
+				<option value="descarga">Exportacion</option>
+			</select>			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Inicio de la Operacion</label>
+			<input type="text" name="fterminacion" id="fterminacion" class="inputBlock date" style="width: 100px"  />
+						<label class="labelBlock">Finalizacion de la Operacion</label>
+			<input type="text" name="fterminacion" id="fterminacion" class="inputBlock date" style="width: 100px"  />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Buque</label>
+			<input type="text" name="proveedor" id="proveedor" class="inputBlock" />			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="button" id="save" value="Guardar" />
+		</td>
+	</tr>
+</table>
+</form>
+	<div>
+	<table class="form" style="border: 2px dashed #99CCFF; width: 350px;">
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Bodega</label></td>
+			<td style="width: 200px"><input type="text" name="bod" id="bod" class="number" style="width: 20px"  /></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Producto</label></td>
+			<td style="width: 200px"><input type="text" name="proveedor" id="proveedor" class="inputBlock" /></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Presentacion</label></td>
+			<td style="width: 200px"><select id="tipo" name="tipo">
+				<option value="granel">A Granel</option>
+				<option value="sacos">Sacos de 300Kg</option>
+				<option value="supersacos">Super Sacos de 500Kg</option>
+			</select>
+			
+			
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Cantidad</label></td>
+			<td style="width: 200px"><input type="text" name="proveedor" id="proveedor" class="inputBlock" /></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Origen</label></td>
+			<td style="width: 200px"><input type="text" name="proveedor" id="proveedor" class="inputBlock" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" id="save" value="Guardar" /></td>
+			</tr>
+	</table>
+	
+	<table>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Bodega</label></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Producto</label></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Presentacion</label></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Cantidad</label></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="field" style="width: 150px"><label class="labelBlock">Origen</label></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+	
+	
+</div> <!-- FORM nuevo ID -->
+
+
+
+
+<table class="form">
+	<tr>
+		<td><label>ID:</label><input type="text" name="idop" id="idop" ><input class="" type="button" value="Cargar" onclick="cargarFormSup()" />
+		</td>
+	</tr>
+</table>
+
+<form class="autoForm">
+	<input type="hidden" name="table" id="table" value="supervision" />
+	<input type="hidden" name="id" id="id" />
+<table class="form" style="border: 2px dashed #99CCFF;" >
+	<tr>		
+		<td class="field" >
+			<label class="labelBlock">Buque Motor</label>
+			<input type="text" name="buquemetor" id="buquemetor" class="inputBlock" />
+			<label class="labelBlock">Fecha Arribo</label>
+			<input type="text" name="farribo" id="farribo" class="inputBlock date" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">No. Contrato</label>
+			<input type="text" name="contrato" id="contrato" class="inputBlock" />
+			<label class="labelBlock">Fecha Terminación</label>
+			<input type="text" name="fterminacion" id="fterminacion" class="inputBlock date" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Nombre del Proveedor</label>
+			<input type="text" name="proveedor" id="proveedor" class="inputBlock" />
+			<label class="labelBlock">Total a Cargar</label>
+			<input type="text" name="totalCargar" id="totalCargar" class="inputBlock number" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Nombre de la Plaza</label>
+			<input type="text" name="plaza" id="plaza" class="inputBlock" />
+			<label class="labelBlock">Carga Anterior</label>
+			<input type="text" name="anterior" id="anterior" class="inputBlock" readonly="readonly"/>			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Reexpedidor</label>
+			<input type="text" name="reexpedidor" id="reexpedidor" class="inputBlock" />
+			<label class="labelBlock">Carga de Hoy</label>
+			<input type="text" name="hoy" id="hoy" class="inputBlock" readonly="readonly" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">Nombre del Producto</label>
+			<input type="text" name="producto" id="producto" class="inputBlock" />
+			<label class="labelBlock">Total Cargado</label>
+			<input type="text" name="total" id="total" class="inputBlock" readonly="readonly" />			
+		</td>
+	</tr>
+	<tr>		
+		<td class="field">
+			<label class="labelBlock">No. Ref</label>
+			<input type="text" name="ref" id="ref" class="inputBlock" />
+			<label class="labelBlock">Remanente por Cargar</label>
+			<input type="text" name="remanente" id="remanente" class="inputBlock" readonly="readonly" />			
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="button" id="save" value="Guardar" />
+		</td>
+	</tr>
+</table>
+
+</form>
+
+<form id="frm1">
+	<input type="hidden" name="table" id="table" value="movimientossup" />
+<table class="form" style="border: 2px dashed #99CCFF;">
+	<tr>
+		<td class="field">
+			<label >Fecha</label>
+			<input type="text" class="date" />
+		</td>
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Transportista: </label>			
+			<input type="text" name="transportista" id="transportista" class="" size="60" />
+			
+			<label>Chofer:</label>
+			<input type="text" name="chofer" id="chofer" size="60" />
+		</td>		
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Placas:</label>
+			<input type="text" name="placas" id="placas" class="" size="8" />
+			
+			<label>Placas Remolque</label>
+			<input type="text" name="placasremolque" id="placasremolque" class="" />
+			
+			<label>No. Eco.</label>
+			<input type="text" name="eco" id="eco" class="" />
+		</td>
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Origen:</label>
+			<input type="text" name="origen" id="origen" class="" size="60" />
+			
+			<label>Destino:</label>
+			<input type="text" name="destino" id="destino" class="" size="60" />
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="field">
+			<label>Carta Porte:</label>
+			<input type="text" name="cartaporte" id="cartaporte" class="" />
+			
+			<label>Ticket de la Bascula:</label>
+			<input type="text" name="ticket" id="ticket" class="" />
+		</td>		
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Producto:</label>
+			<input type="text" name="producto" id="producto" class="" size="60" />
+			
+			<select id="tipo" name="tipo">
+				<option value="granel">A Granel</option>
+				<option value="sacos">Sacos de 300Kg</option>
+				<option value="supersacos">Super Sacos de 500Kg</option>
+			</select>
+			
+			<label id="labelCantidad">Cantidad:</label>
+			<input type="text" name="cantidad" id="cantidad" class="number" size="4" value="0" />
+			
+			<label>Bodega:</label>
+			<input type="text" name="bodega" id="bodega" class="" size="4" />
+						
+		</td>
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Peso Bruto:</label>
+			<input type="text" name="bruto" id="bruto" class="number" />
+			<label>Peso Neto:</label>
+			<input type="text" name="neto" id="neto" class="number" />
+		</td>
+	</tr>
+	<tr>
+		<td class="field">
+			<label>Peso Tara:</label>
+			<input type="text" name="tara" id="tara" class="number" />
+			<label>Peso Bascula:</label>
+			<input type="text" name="bascula" id="bascula" class="number" />
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="field">
+			<label>Inicio de Carga:</label>
+			<input type="text" name="inicio" id="inicio" class="time" size="5"/>
+			<label>Terminación de Carga:</label>
+			<input type="text" name="fin" id="fin" class="time" size="5"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="button" value="Agregar" id="adMov" onclick="addMov()"/>
+		</td>
+	</tr>
+</table>
+</form>
+<table class="form">
+	<thead>
+		<tr class="title">
+			<th width="10px">Folio</th>
+			<th width="10px">Fecha</th>
+			<th width="20px">C. Porte</th>
+			<th width="100px">Chofer</th>
+			<th width="100px">Transportista</th>
+			<th width="10px">No. Eco</th>
+			<th width="10px">Ticket</th>
+			<th width="10px">BGA</th>
+			<th width="30px">P. Bruto</th>
+			<th width="30px">P. Tara</th>
+			<th width="30px">Neto</th>
+			<th width="30px">Origen</th>
+			<th width="30px">Peso</th>
+			<th width="30px">Dif</th>
+		</tr>
+	</thead>
+</table>
+	<div id="tablaHechos">
+	</div>
+<script type="text/javascript">
+	setClassEvents();
+	  $(function() {
+	    $( ".date" ).datepicker({
+		      changeMonth: true,
+		      changeYear: true,
+		      dateFormat: 'yy-mm-dd'
+		    });
+		    
+		$("#labelCantidad").hide();
+        $("#cantidad").hide();
+		
+        $("#tipo").change(function(){
+        	if($(this).val()=="granel")	{
+        		$("#labelCantidad").hide();
+        		$("#cantidad").hide();
+        	}	else	{
+        		$("#labelCantidad").show();
+        		$("#cantidad").show();
+        		$("#cantidad").val(0);
+        	}
+        });
+        
+        
+        $("#dischperday").focusout(function(){calcular();});
+        $("#quantity").focusout(function(){calcular();});
+        /*$('.autoForm input').change(function(){
+	        var form = $(this).parents('form:first');
+	        var id= form.children('#id').val();
+	        
+	        if(id!=undefined && id!="")	{
+		        var data = form.serialize();	        
+		        autoSave(data);
+	       	}
+	    });*/	   
+	        
+	  });
+</script>

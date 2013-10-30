@@ -1,0 +1,26 @@
+@charset "utf-8";
+.general {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+}
+.tituloTabla {
+	font-weight: bold;
+	color: #FFF;
+}
+.general2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	text-align: right;
+	border-width:0;
+}
+.generalCombo {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	border-width:0;
+}
+.titulo {
+	font-weight: bold;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #006;
+}

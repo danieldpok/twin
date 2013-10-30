@@ -1,0 +1,65 @@
+@charset "utf-8";
+.titulo {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 14pt;
+}
+.texto {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+}
+.powered {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+}
+.textoNegrita {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.textoField {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+}
+.titulo2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 12pt;
+}
+.titulo3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 10pt;
+}
+.texto2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+}
+.tituloNormal {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #0183bf;
+	font-size: 14pt;
+}
+.textoRed {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9pt;
+	color: #F00;
+	font-weight: bolder;
+}
+.fondo {
+	background-image: url(fondo.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.tituloNormal2 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+	color: #000;
+	font-size: 12pt;
+	text-decoration: underline;
+}
